@@ -1,0 +1,82 @@
+/* Reset some default browser styles */
+body, h1, h2, h3, p, form {
+    margin: 0;
+    padding: 0;
+}
+
+.background-gradient {
+    background-image: url('https://placehold.co/500x500/cccccc/333333?text=Placeholder');
+    width: 100%;   /* Adjust as needed */
+    height: auto;  /* Adjust as needed */
+}
+
+/* Create a container for the application */
+.container {
+    max-width: 800px;
+    margin: 2em auto;
+    padding: 1em;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+/* Style header text */
+h1 {
+    font-size: 2em;
+    margin-bottom: 0.5em;
+}
+
+/* Add some spacing and center the image */
+img {
+    display: block;
+    margin: 1em auto;
+}
+
+/* Navigation links */
+nav a {
+    margin: 0 0.5em;
+    text-decoration: none;
+    color: black;
+}
+
+/* Style the post form */
+form {
+    margin: 2em 0;
+}
+
+textarea {
+    width: 100%;
+    min-height: 100px;
+    margin-bottom: 1em;
+}
+
+/* Style the posts */
+.posts {
+    margin: 2em 0;
+}
+
+.post {
+    margin-bottom: 2em;
+}
+
+/* Dashboard Styles */
+.charts-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 1rem;
+}
+
+/* Styling for individual charts. Adjust width as per your requirement. */
+canvas {
+    width: 100%;
+    max-width: 48%; /* Allows for 2 charts side-by-side with a little space in between */
+    height: auto;
+    box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.1); /* Optional: Adds a subtle shadow for depth */
+}
+
+/* Mobile Responsive */
+@media only screen and (max-width: 600px) {
+    canvas {
+        max-width: 100%; /* On mobile, charts take full width */
+    }
+}

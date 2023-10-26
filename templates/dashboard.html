@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Dashboard</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body class="background-gradient">
+    <div class="container">
+        <h1>Dashboard</h1>
+
+        <div class="charts-container">
+            <canvas id="postsPerWeek"></canvas>
+            <canvas id="registeredUsers"></canvas>
+            <canvas id="postsByUsers"></canvas>
+            <canvas id="wordsPerPost"></canvas>
+        </div>
+
+        <script>
+            // Sample data, replace with data fetched from Flask
+            let postsPerWeekData = {};  // Data for posts per week chart
+            let registeredUsersData = {};  // Data for registered users chart
+
+            // Chart for posts per week
+            let ctx1 = document.getElementById('postsPerWeek').getContext('2d');
+            let postsPerWeekChart = new Chart(ctx1, {
+                type: 'bar', // or 'line', 'doughnut', etc.
+                data: postsPerWeekData,
+                // ... other chart configurations ...
+            });
+
+            // Chart for registered users
+            let ctx2 = document.getElementById('registeredUsers').getContext('2d');
+            let registeredUsersChart = new Chart(ctx2, {
+                type: 'doughnut',
+                data: registeredUsersData,
+                // ... other chart configurations ...
+            });
+
+            // ... Add similar blocks for other charts ...
+        </script>
+    </div>
+</body>
+</html>
